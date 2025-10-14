@@ -8,7 +8,8 @@ Writing reports, 1 storyline - Damian.
 HTML, CSS, 1 storyline  - Niki.  
 Backstory writing, 1 storyline - Boaz.
 
-Game name: Kiss with a Y
-Studio name: Studio Keys
+Game name: Kiss with a Y.
+
+Studio name: Studio Keys.
 
 Our trello is https://trello.com/b/XgoLW2Wd/project
