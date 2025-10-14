@@ -1,14 +1,9 @@
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: #323131; /* placeholder background */
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
-
 /* Text bar at bottom center */
 .text-bar {
   width: 80%;
@@ -23,8 +18,28 @@ body {
 }
 
 /* Dialogue text */
-.text-bar p {
-  margin: 0;
-  font-size: 20px;
-  color: #333;
+.options{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.options li {
+    display: inline-block;
+    margin: 0 10px;
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.options li:hover {
+    background: #666;
 }
