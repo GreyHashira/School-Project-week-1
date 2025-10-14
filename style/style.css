@@ -4,7 +4,7 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-/* Text bar at bottom center */
+
 .text-bar {
   width: 80%;
   max-width: 900px;
@@ -17,7 +17,6 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Dialogue text */
 .options{
     position: absolute;
     bottom: 10px;
