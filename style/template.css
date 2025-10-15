@@ -62,10 +62,15 @@ a {
   text-decoration: none;
 }
 .jecka{
-    width: [fixed 50];
-    height: [fixed 50];
+  height: 350px;
+  width: 200px;
 }
 .nicole{
-    width: [fixed 50];
-    height: [fixed 50];
+  height: 300px;
+  width: 100px;
+}
+.mainMenuButton {
+    position:absolute;
+    bottom:0;
+    right:0;
 }
