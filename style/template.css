@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/note.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,10 +61,10 @@ a {
   text-decoration: none;
 }
 .jecka{
-    width: [fixed 50];
-    height: [fixed 50];
+    width: [fixed 50px];
+    height: [fixed 50px];
 }
 .nicole{
-    width: [fixed 50];
-    height: [fixed 50];
+    width: [fixed 50px];
+    height: [fixed 50px];
 }
