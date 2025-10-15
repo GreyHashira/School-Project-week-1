@@ -16,10 +16,8 @@ body {
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
-/* Dialogue text */
 .options {
-    position: relative;
+    text-align: center;
     padding: 30px;
     border-radius: 12px;
     max-width: 400px;
@@ -29,8 +27,8 @@ body {
     align-items: center;
     background-image: url('../images/note.png'); /* Adjust path */
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0.5;
 }
 
