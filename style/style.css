@@ -77,3 +77,6 @@ body {
 .options li:hover {
     background: rgba(0, 0, 0, 0.1); 
 }
+a {
+  text-decoration: none;
+}
