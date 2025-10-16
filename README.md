@@ -13,3 +13,4 @@ Game name: Kiss with a Y.
 Studio name: Studio Keys.
 
 Our trello is https://trello.com/b/XgoLW2Wd/project
+Our Github is https://github.com/GreyHashira/School-Project-week-1
