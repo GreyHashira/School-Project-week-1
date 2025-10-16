@@ -4,13 +4,13 @@ let response3 = document.getElementById("response3");
 let dialogue = document.getElementById("dialogue");
 
 response1.addEventListener("click", function(){
-    dialogue.textContent = "test";
+    dialogue.textContent = "You chose option 1";
 });
 
 response2.addEventListener("click", function(){
-    dialogue.textContent = "test2";
+    dialogue.textContent = "You chose option 2";
 });
 
 response3.addEventListener("click", function(){
-    dialogue.textContent = "test3";
+    dialogue.textContent = "You chose option 3";
 });
