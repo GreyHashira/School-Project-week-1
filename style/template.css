@@ -12,6 +12,8 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.5;
+    bottom: 10px;
+    position: absolute;
 }
 
 .options ul {
@@ -74,3 +76,60 @@ a {
     bottom:0;
     right:0;
 }
+.template {
+    background-image: url(../images/Mall_int_29.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: unset;
+  border-color: unset;
+ }
+.index {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80% 100%;
+  background-position: center;
+  border-color: black;
+  border-left: 90px;
+  border-right: 90px;
+  background-image: url(../images/360_F_30939683_d2nxeagANUTpNA9BtSiYllmsOJRiWha0.png);
+}
+.startmenu:hover {
+    color: black;
+    text-shadow: 1px 2px white;
+}
+.startmenu {
+    color: white;
+    text-shadow: 1px 2px black;
+}
+.text-bar {
+  width: 80%;
+  max-width: 900px;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #999;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.buttonmenu {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 100%;
+    position: absolute;
+    font-size: xx-large;
+    text-align: center;
+    top: 35%;
+}
+
+

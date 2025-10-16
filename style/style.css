@@ -1,8 +1,4 @@
-body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
+
 
 .text-bar {
   width: 80%;
@@ -14,9 +10,3 @@ body {
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.mainMenuButton {
-    position:absolute;
-    bottom:0;
-    right:0;
-}
