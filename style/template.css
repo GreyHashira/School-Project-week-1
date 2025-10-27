@@ -159,7 +159,7 @@ button {
     position: absolute;
     text-indent: 5%;
     margin-left: 30%;
-    margin-top: -20%;
+    margin-top: -20vw;
     width: 60%;
     height: 290px;
     filter: brightness(80%);
