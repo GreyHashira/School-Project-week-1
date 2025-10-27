@@ -5,7 +5,7 @@ The goal of the game is to entertain people but also tell them a story that they
 We will all do JavaScript and story writing for our specific storylines  
 CSS, Reports - Grey.  
 HTML, Javascript - Niki 
-Reports - Damian
+  Reports - Damian
 
 Game name: Kiss with a Y.
 
