@@ -28,11 +28,10 @@
     border-radius: 10%;
     position: absolute;
     font-size: xx-large;
-    top: 25%;
+    top: 20vw;
     left: 40vw;
     width: 15vw;
-    bottom: 56.9%;
-    background-color: rgba(0,0,0,0.80);
+    border-style: dotted;
 }
 /* ------------------------------Template CSS vvv------------------------------*/
 .options {
