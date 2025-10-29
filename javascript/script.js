@@ -2,54 +2,132 @@ document.addEventListener("DOMContentLoaded", () => {
     const dialogue = document.getElementById("dialogue");
     const optionsList = document.querySelector(".options ul");
 
-    function renderOptions(options) {
+    function renderOptions(nodes) {
         optionsList.innerHTML = "";
-        options.forEach(opt => {
+        nodes.forEach(node => {
             const li = document.createElement("li");
             const btn = document.createElement("button");
             btn.type = "button";
-            btn.textContent = opt.label;
-            btn.addEventListener("click", () => opt.onClick());
+            btn.textContent = node.label;
+            btn.addEventListener("click", () => {
+                dialogue.textContent = node.text || node.label;
+                if (node.children && node.children.length) {
+                    renderOptions(node.children);
+                } else {
+                    optionsList.innerHTML = "";
+                }
+            });
             li.appendChild(btn);
             optionsList.appendChild(li);
         });
     }
+    let volume = document.getElementById('volumeSlider');
+volume.addEventListener("change", function(e) {
+    audio.volume = e.currentTarget.value / 100;
+})
 
-    const initialOptions = [
+    const tree = [
         {
-            label: "Dialogue option 1",
-            onClick: () => {
-                dialogue.textContent = "You chose option 1. Choose a follow-up:";
-                renderOptions([
-                    { label: "Follow-up 1A", onClick: () => dialogue.textContent = "You chose 1A" },
-                    { label: "Follow-up 1B", onClick: () => dialogue.textContent = "You chose 1B" },
-                    { label: "Follow-up 1C", onClick: () => dialogue.textContent = "You chose 1C" }
-                ]);
-            }
+            label: "Option 1",
+            text: "Text for Option 1",
+            children: [
+                {
+                    label: "Option 1.1",
+                    text: "Text for Option 1.1",
+                    children: [
+                        { label: "Option 1.1.1", text: "Text for 1.1.1", children: [] },
+                        { label: "Option 1.1.2", text: "Text for 1.1.2", children: [] },
+                        { label: "Option 1.1.3", text: "Text for 1.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 1.2",
+                    text: "Text for Option 1.2",
+                    children: [
+                        { label: "Option 1.2.1", text: "Text for 1.2.1", children: [] },
+                        { label: "Option 1.2.2", text: "Text for 1.2.2", children: [] },
+                        { label: "Option 1.2.3", text: "Text for 1.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 1.3",
+                    text: "Text for Option 1.3",
+                    children: [
+                        { label: "Option 1.3.1", text: "Text for 1.3.1", children: [] },
+                        { label: "Option 1.3.2", text: "Text for 1.3.2", children: [] },
+                        { label: "Option 1.3.3", text: "Text for 1.3.3", children: [] }
+                    ]
+                }
+            ]
         },
         {
-            label: "Dialogue option 2",
-            onClick: () => {
-                dialogue.textContent = "You chose option 2. Choose a follow-up:";
-                renderOptions([
-                    { label: "Follow-up 2A", onClick: () => dialogue.textContent = "You chose 2A" },
-                    { label: "Follow-up 2B", onClick: () => dialogue.textContent = "You chose 2B" },
-                    { label: "Follow-up 2C", onClick: () => dialogue.textContent = "You chose 2C" }
-                ]);
-            }
+            label: "Option 2",
+            text: "Text for Option 2",
+            children: [
+                {
+                    label: "Option 2.1",
+                    text: "Text for Option 2.1",
+                    children: [
+                        { label: "Option 2.1.1", text: "Text for 2.1.1", children: [] },
+                        { label: "Option 2.1.2", text: "Text for 2.1.2", children: [] },
+                        { label: "Option 2.1.3", text: "Text for 2.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 2.2",
+                    text: "Text for Option 2.2",
+                    children: [
+                        { label: "Option 2.2.1", text: "Text for 2.2.1", children: [] },
+                        { label: "Option 2.2.2", text: "Text for 2.2.2", children: [] },
+                        { label: "Option 2.2.3", text: "Text for 2.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 2.3",
+                    text: "Text for Option 2.3",
+                    children: [
+                        { label: "Option 2.3.1", text: "Text for 2.3.1", children: [] },
+                        { label: "Option 2.3.2", text: "Text for 2.3.2", children: [] },
+                        { label: "Option 2.3.3", text: "Text for 2.3.3", children: [] }
+                    ]
+                }
+            ]
         },
         {
-            label: "Dialogue option 3",
-            onClick: () => {
-                dialogue.textContent = "You chose option 3. Choose a follow-up:";
-                renderOptions([
-                    { label: "Follow-up 3A", onClick: () => dialogue.textContent = "You chose 3A" },
-                    { label: "Follow-up 3B", onClick: () => dialogue.textContent = "You chose 3B" },
-                    { label: "Follow-up 3C", onClick: () => dialogue.textContent = "You chose 3C" }
-                ]);
-            }
+            label: "Option 3",
+            text: "Text for Option 3",
+            children: [
+                {
+                    label: "Option 3.1",
+                    text: "Text for Option 3.1",
+                    children: [
+                        { label: "Option 3.1.1", text: "Text for 3.1.1", children: [] },
+                        { label: "Option 3.1.2", text: "Text for 3.1.2", children: [] },
+                        { label: "Option 3.1.3", text: "Text for 3.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 3.2",
+                    text: "Text for Option 3.2",
+                    children: [
+                        { label: "Option 3.2.1", text: "Text for 3.2.1", children: [] },
+                        { label: "Option 3.2.2", text: "Text for 3.2.2", children: [] },
+                        { label: "Option 3.2.3", text: "Text for 3.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 3.3",
+                    text: "Text for Option 3.3",
+                    children: [
+                        { label: "Option 3.3.1", text: "Text for 3.3.1", children: [] },
+                        { label: "Option 3.3.2", text: "Text for 3.3.2", children: [] },
+                        { label: "Option 3.3.3", text: "Text for 3.3.3", children: [] }
+                    ]
+                }
+            ]
         }
     ];
 
-    renderOptions(initialOptions);
+    dialogue.textContent = "Choose your option";
+    renderOptions(tree);
 });
