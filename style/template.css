@@ -168,10 +168,10 @@ button {
 .notepad {
     position: absolute;
     text-indent: 5%;
-    margin-left: 30%;
-    margin-top: -22%;
+    left: 30%;
+    bottom: 1%;
     width: 60%;
-    height: 290px;
+    height: 40%;
     filter: brightness(80%);
     opacity: 90%;
     z-index: -1;
