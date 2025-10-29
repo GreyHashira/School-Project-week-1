@@ -172,3 +172,8 @@ button {
     z-index: 1;
     font-size: xx-large;
  }
+.footer1 {
+    position: absolute;
+    left: 0.5%;
+    bottom: 1%;
+}
