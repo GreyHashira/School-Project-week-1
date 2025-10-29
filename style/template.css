@@ -106,8 +106,7 @@ a {
 }
 .mainMenuButton {
     position:absolute;
-    bottom:50%;
-    right: 50%;
+    bottom:1%;
     color: darkblue;
     text-decoration: underline;
     text-align: center;
