@@ -150,19 +150,6 @@ button {
   border-color: unset;
   overflow-x: hidden;
   overflow-y: hidden;
- } 
- #dialogue{
-    color: black;
-    text-indent: 5%;
-    margin-left: 30%;
-    margin-top: 30%;
-    width: 60%;
-    height: 250px;
-    z-index: 1;
-    font-size: xx-large;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 .notepad {
     position: absolute;
@@ -176,4 +163,12 @@ button {
     z-index: -1;
     overflow-x: hidden;
     overflow-y: hidden;
-}
+} 
+ #dialogue{
+  position: absolute;
+    left: 32%;
+    bottom: 28%;
+    color: black;
+    z-index: 1;
+    font-size: xx-large;
+ }
