@@ -105,13 +105,13 @@ a {
   width: 100px;
 }
 .mainMenuButton {
-    position:absolute;
-    bottom:1%;
+    position: absolute;
+    bottom: 1%;
     color: darkblue;
     text-decoration: underline;
     text-align: center;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .template {
     background-image: url(../images/Mall_int_29.png);
@@ -122,8 +122,8 @@ a {
     border-color: black;
     border-left: 90px;
     border-right: 90px;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .text-bar {
@@ -136,8 +136,8 @@ a {
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 button {
   color: black;
@@ -149,8 +149,8 @@ button {
   cursor: pointer;
   background-color: unset;
   border-color: unset;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
  } 
  #dialogue{
     color: black;
@@ -162,8 +162,8 @@ button {
     z-index: 1;
     font-size: xx-large;
     position: relative;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .notepad {
     position: absolute;
@@ -175,6 +175,6 @@ button {
     filter: brightness(80%);
     opacity: 90%;
     z-index: -1;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
