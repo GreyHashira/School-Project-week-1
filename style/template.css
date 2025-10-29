@@ -107,11 +107,10 @@ a {
 .mainMenuButton {
     position: absolute;
     bottom: 1%;
+    right: 1%;
     color: darkblue;
     text-decoration: underline;
     text-align: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 .template {
     background-image: url(../images/Mall_int_29.png);
