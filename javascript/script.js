@@ -1,21 +1,133 @@
-let response1 = document.getElementById("response1");
-let response2 = document.getElementById("response2");
-let response3 = document.getElementById("response3");
-let dialogue = document.getElementById("dialogue");
+document.addEventListener("DOMContentLoaded", () => {
+    const dialogue = document.getElementById("dialogue");
+    const optionsList = document.querySelector(".options ul");
 
-function updateDialogue(newText) {
-    dialogue.textContent = "";       
-    dialogue.textContent = newText;  
-}
+    function renderOptions(nodes) {
+        optionsList.innerHTML = "";
+        nodes.forEach(node => {
+            const li = document.createElement("li");
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.textContent = node.label;
+            btn.addEventListener("click", () => {
+                dialogue.textContent = node.text || node.label;
+                if (node.children && node.children.length) {
+                    renderOptions(node.children);
+                } else {
+                    optionsList.innerHTML = "";
+                }
+            });
+            li.appendChild(btn);
+            optionsList.appendChild(li);
+        });
+    }
+    let volume = document.getElementById('volumeSlider');
+volume.addEventListener("change", function(e) {
+    audio.volume = e.currentTarget.value / 100;
+})
 
-response1.addEventListener("click", function(){
-    updateDialogue("You chose option 1");
-});
+    const tree = [
+        {
+            label: "Option 1",
+            text: "Text for Option 1",
+            children: [
+                {
+                    label: "Option 1.1",
+                    text: "Text for Option 1.1",
+                    children: [
+                        { label: "Option 1.1.1", text: "Text for 1.1.1", children: [] },
+                        { label: "Option 1.1.2", text: "Text for 1.1.2", children: [] },
+                        { label: "Option 1.1.3", text: "Text for 1.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 1.2",
+                    text: "Text for Option 1.2",
+                    children: [
+                        { label: "Option 1.2.1", text: "Text for 1.2.1", children: [] },
+                        { label: "Option 1.2.2", text: "Text for 1.2.2", children: [] },
+                        { label: "Option 1.2.3", text: "Text for 1.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 1.3",
+                    text: "Text for Option 1.3",
+                    children: [
+                        { label: "Option 1.3.1", text: "Text for 1.3.1", children: [] },
+                        { label: "Option 1.3.2", text: "Text for 1.3.2", children: [] },
+                        { label: "Option 1.3.3", text: "Text for 1.3.3", children: [] }
+                    ]
+                }
+            ]
+        },
+        {
+            label: "Option 2",
+            text: "Text for Option 2",
+            children: [
+                {
+                    label: "Option 2.1",
+                    text: "Text for Option 2.1",
+                    children: [
+                        { label: "Option 2.1.1", text: "Text for 2.1.1", children: [] },
+                        { label: "Option 2.1.2", text: "Text for 2.1.2", children: [] },
+                        { label: "Option 2.1.3", text: "Text for 2.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 2.2",
+                    text: "Text for Option 2.2",
+                    children: [
+                        { label: "Option 2.2.1", text: "Text for 2.2.1", children: [] },
+                        { label: "Option 2.2.2", text: "Text for 2.2.2", children: [] },
+                        { label: "Option 2.2.3", text: "Text for 2.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 2.3",
+                    text: "Text for Option 2.3",
+                    children: [
+                        { label: "Option 2.3.1", text: "Text for 2.3.1", children: [] },
+                        { label: "Option 2.3.2", text: "Text for 2.3.2", children: [] },
+                        { label: "Option 2.3.3", text: "Text for 2.3.3", children: [] }
+                    ]
+                }
+            ]
+        },
+        {
+            label: "Option 3",
+            text: "Text for Option 3",
+            children: [
+                {
+                    label: "Option 3.1",
+                    text: "Text for Option 3.1",
+                    children: [
+                        { label: "Option 3.1.1", text: "Text for 3.1.1", children: [] },
+                        { label: "Option 3.1.2", text: "Text for 3.1.2", children: [] },
+                        { label: "Option 3.1.3", text: "Text for 3.1.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 3.2",
+                    text: "Text for Option 3.2",
+                    children: [
+                        { label: "Option 3.2.1", text: "Text for 3.2.1", children: [] },
+                        { label: "Option 3.2.2", text: "Text for 3.2.2", children: [] },
+                        { label: "Option 3.2.3", text: "Text for 3.2.3", children: [] }
+                    ]
+                },
+                {
+                    label: "Option 3.3",
+                    text: "Text for Option 3.3",
+                    children: [
+                        { label: "Option 3.3.1", text: "Text for 3.3.1", children: [] },
+                        { label: "Option 3.3.2", text: "Text for 3.3.2", children: [] },
+                        { label: "Option 3.3.3", text: "Text for 3.3.3", children: [] }
+                    ]
+                }
+            ]
+        }
+    ];
 
-response2.addEventListener("click", function(){
-    updateDialogue("You chose option 2");
-});
-
-response3.addEventListener("click", function(){
-    updateDialogue("You chose option 3");
+    dialogue.textContent = "Choose your option";
+    renderOptions(tree);
 });
