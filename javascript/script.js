@@ -21,9 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
             optionsList.appendChild(li);
         });
     }
-    let volume = document.getElementById('volumeSlider');
-volume.addEventListener("change", function(e) {
-    audio.volume = e.currentTarget.value / 100;
+    const volume = document.getElementById('volume-slider');
+    audio.volume = volume.value / 100;
+    volume.addEventListener("input", (e) => {
+    audio.volume = e.target.value / 100;
+
+})
 })
 
     const tree = [
@@ -130,4 +133,3 @@ volume.addEventListener("change", function(e) {
 
     dialogue.textContent = "Choose your option";
     renderOptions(tree);
-});
