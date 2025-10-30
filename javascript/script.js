@@ -134,5 +134,4 @@ const volume = document.getElementById('volume-slider');
 audio.volume = volume.value / 100;
 volume.addEventListener("input", (e) => {
 audio.volume = e.target.value / 100;
-
 })
