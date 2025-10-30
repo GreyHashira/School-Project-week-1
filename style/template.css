@@ -167,10 +167,10 @@ button {
  #dialogue{
   position: absolute;
     left: 32%;
-    bottom: 28%;
+    bottom: 12%;
     color: black;
     z-index: 1;
-    font-size: xx-large;
+    font-size: x-large;
  }
 .footer1 {
     position: absolute;
